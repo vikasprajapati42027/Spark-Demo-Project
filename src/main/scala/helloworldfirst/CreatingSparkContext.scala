@@ -13,7 +13,9 @@ object CreatingSparkContext {
     println("Num of elements in RDD : ",arrayRDD.count())
     arrayRDD.foreach(println)
 
-    val file = ""
+    val file = "/home/sterlite/csvfile/vikas123.csv"
+    val fileRDD = sc.textFile(file,5)
+    fileRDD.foreach(println)
 
   }
 }
