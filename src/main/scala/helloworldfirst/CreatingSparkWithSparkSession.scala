@@ -13,6 +13,10 @@ object CreatingSparkWithSparkSession {
 
     val arrayRDD = sparkSession.sparkContext.parallelize(array,3)
     arrayRDD.foreach(println)
+
+    val file = "/home/sterlite/csvfile/vikas123.csv"
+    val fileRDD =sparkSession.sparkContext.textFile(file)
+    fileRDD.foreach(println)
   }
 
 }
